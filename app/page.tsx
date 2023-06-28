@@ -1,10 +1,9 @@
-import Image from 'next/image'
+import TitleContainer from "./title_container"
 
 export default function Home() {
   return (
     <>
-      <h1>HELLO,UNKO</h1>
-      
+      <TitleContainer/>
     </>
   )
 }
