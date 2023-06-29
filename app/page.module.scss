@@ -1,12 +1,11 @@
-.titleWrapper {
-    width: 100%;
-    height: 100vh;
-    background: url(https://www2.kek.jp/ilc/wp-content/uploads/2018/10/michinokaimei_img1.jpg);
-    background-size: cover;
+.keyVisual {
+    width:100%;
+    height:100vh;
+    position:relative;
     display: grid;
     place-items: center;
-
     h1 {
+        position:fixed;
         font-size: 10rem;
         color: white;
         animation-name: fadeinup;
@@ -15,6 +14,18 @@
         animation-duration: 1s;
         animation-fill-mode:forwards;
     }
+}
+
+.keyVisual::before {
+    content:"";
+    position:fixed;
+    z-index:-1;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    background: url(https://www2.kek.jp/ilc/wp-content/uploads/2018/10/michinokaimei_img1.jpg);
+    background-size: cover;
 }
 
 @keyframes fadeinup {
@@ -27,4 +38,31 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.container {
+    position:relative;
+    z-index:1;
+    width:100%;
+    height:1000px;
+    padding-top:100px;
+    background: linear-gradient(45deg, #0b0e30, #394091, #252847);
+    animation: backGradient 20s ease infinite;
+}
+
+.intro {
+    padding:20px 0;
+    display:grid;
+    place-items:center;
+    line-height:100%;
+    p {
+        font-size:1.5rem;
+        font-weight:400;
+        color:white;
+    }
+}
+
+.index {
+    color:red;
+    border: botom 1px;
 }
