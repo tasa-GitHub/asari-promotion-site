@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color:black;
+    background: linear-gradient(45deg, #0b0e30, #394091, #252847);
 }
 
 @keyframes backGradient {

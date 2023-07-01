@@ -12,7 +12,7 @@ export default function Home() {
           <h1>
             墜落する
             <br />
-            宇宙船からの脱出
+            宇宙船からの<span className={styles.highlight}>脱出</span>
           </h1>
         </div>
       </div>
@@ -31,6 +31,7 @@ export default function Home() {
             <p>あなたは無事に脱出することができるか―――――――</p>
           </div>
         </div>
+        <div className={styles.details}></div>
       </div>
     </>
   );
