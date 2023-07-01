@@ -6,9 +6,9 @@
     place-items: center;
     h1 {
         position:fixed;
-        padding:20px 10px;
+        padding:20px 20px;
         border: solid 1px white;
-        border-radius:30px;
+        //border-radius:30px;
         font-size: 10rem;
         color: white;
         animation-name: fadeinup;
@@ -35,7 +35,7 @@
     width: 100%;
     height: 100vh;
     background: url(https://cdn.pixabay.com/photo/2017/02/09/12/02/mars-2051747_1280.png);
-    background-size: cover;
+    background-size:cover;
     animation-name: fadein;
     opacity:0;
     animation-delay:1.5s;
@@ -46,7 +46,7 @@
 @keyframes fadeinup {
     0% {
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(100px);
     }
 
     100% {
@@ -70,7 +70,8 @@
     width:100%;
     height:3000px;
     padding-top:50px;
-    background:url(https://www2.kek.jp/ilc/wp-content/uploads/2018/10/michinokaimei_img1.jpg);
+    background:url(/space.png);
+    background-size: cover;
     animation: backGradient 20s ease infinite;
 }
 
