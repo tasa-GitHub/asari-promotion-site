@@ -73,6 +73,7 @@
     background:url(/space.png);
     background-size: cover;
     animation: backGradient 20s ease infinite;
+    box-shadow: 0 0 8px black;
 }
 
 .intro {
@@ -84,7 +85,7 @@
     background-color:#252847;
     border-radius: 10px;
     width:800px;
-    box-shadow: 0 0 8px black;
+    box-shadow: 0 -8px 2px black;
     p {
         font-size:1.5rem;
         font-weight:400;
