@@ -1,0 +1,25 @@
+.keyVisual {
+  width: 100%;
+  position: relative;
+  display: grid;
+  place-items: center;
+  h1 {
+    position: fixed;
+    padding: 20px 20px;
+    border: solid 1px white;
+    font-size: 10vw;
+    color: white;
+    animation-name: fadeinup;
+    opacity: 0;
+    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    .highlight {
+      text-decoration: underline;
+      text-decoration-thickness: 0.2em;
+      text-decoration-color: rgba(255, 0, 43, 0.8);
+      text-underline-offset: -0.1em;
+      text-decoration-skip-ink: none;
+    }
+  }
+}
