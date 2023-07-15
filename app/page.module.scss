@@ -75,29 +75,31 @@
   background-size: cover;
   animation: backGradient 20s ease infinite;
   box-shadow: 0 -2px 8px black;
-  .container {
-    margin: 0 auto;
-    width: 90vw;
-    .intro {
-      margin: 0 auto;
-      padding: 20px 0;
-      display: grid;
-      place-items: center;
-      line-height: 100%;
-      background-color: #252847;
-      border-radius: 10px;
-      width: 90%;
-      box-shadow: 0 0 8px black;
-      .index {
-        color: red;
-        border: botom 1px;
-      }
-      p {
-        font-size: 1.5rem;
-        font-weight: 400;
-        color: white;
-      }
-    }
+}
+
+.container {
+  margin: 0 auto;
+  width: 90vw;
+}
+
+.intro {
+  margin: 0 auto;
+  padding: 20px 0;
+  display: grid;
+  place-items: center;
+  line-height: 100%;
+  background-color: #252847;
+  border-radius: 10px;
+  width: 90%;
+  box-shadow: 0 0 8px black;
+  .index {
+    color: red;
+    border: botom 1px;
+  }
+  p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: white;
   }
 }
 
