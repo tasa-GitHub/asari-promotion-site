@@ -1,5 +1,6 @@
-.keyVisual {
-  width: 100%;
+/*.keyVisual {
+  width: 100vw;
+  height: 400px;
   position: relative;
   display: grid;
   place-items: center;
@@ -23,3 +24,51 @@
     }
   }
 }
+
+.keyVisual::before {
+  content: "";
+  position: fixed;
+  //z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 400px;
+  background: url(https://cdn.pixabay.com/photo/2017/02/09/12/02/mars-2051747_1280.png);
+  background-size: cover;
+  background-position: top right;
+  animation-name: fadein;
+  opacity: 0;
+  animation-delay: 1.5s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeinup {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .keyVisual {
+    height: 100vh;
+  }
+  .keyVisual::before {
+    height: 100vh;
+  }
+}*/
