@@ -1,3 +1,66 @@
+.container {
+  display: flex;
+  width: 100%;
+  height: 400px;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.container_left {
+  width: 50%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  z-index: 1;
+  //gird-template-areas
+}
+
+.meteor {
+  grid-area: 1/1;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.title {
+  grid-area: 1/1;
+  font-size: 7vw;
+  color: yellow;
+  text-shadow: 2px 2px 2px blue;
+}
+
+.container_right {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 50% 50%;
+  width: 50%;
+  height: 50%;
+  place-items: center;
+}
+
+.earth {
+  grid-area: 1/2;
+}
+
+.mars {
+  grid-area: 2/2;
+  margin: 50px 150px 0 0;
+}
+
+.tsubu {
+  grid-area: 2/2;
+}
+
+.rocket {
+  grid-area: 1/1;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    height: 100vh;
+  }
+}
+
 /*.keyVisual {
   width: 100vw;
   height: 400px;
