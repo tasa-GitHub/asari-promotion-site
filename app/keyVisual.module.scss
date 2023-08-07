@@ -1,115 +1,83 @@
 .container {
-  display: flex;
   width: 100%;
-  height: 400px;
-  align-items: flex-end;
+  height: calc(100vw / 1.8);
+  display: grid;
+  grid-template-rows: 15% 5% 5% 20% 30% 5% 5% 15%;
+  grid-template-columns: 10% 2.5% 35% 2.5% 10% 10% 30%;
+  background-color: midnightblue;
+  place-items: center;
   overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 }
 
-.container_left {
-  width: 50%;
-  height: 100%;
-  display: grid;
-  place-items: center;
-  z-index: 1;
-  //gird-template-areas
+.asari {
+  grid-area: 2/2/3/3;
+}
+
+.group {
+  grid-area: 2/3/3/4;
+  color: white;
+  font-size: 2vh;
 }
 
 .meteor {
-  grid-area: 1/1;
-  width: 100%;
-  height: 100%;
-  position: relative;
+  grid-area: 2/3/8/4;
+  animation-name: fadeinup;
+  opacity: 0;
+  animation-delay: 0.5s;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
 }
 
 .title {
-  grid-area: 1/1;
-  font-size: 7vw;
+  grid-area: 3/2/7/5;
   color: yellow;
-  text-shadow: 2px 2px 2px blue;
-}
-
-.container_right {
-  display: grid;
-  grid-template-rows: 50% 50%;
-  grid-template-columns: 50% 50%;
-  width: 50%;
-  height: 50%;
-  place-items: center;
+  text-shadow: 4px 4px 4px blue;
+  font-size: 7vw;
+  text-align: center;
+  z-index: 1;
+  animation-name: fadeinup;
+  opacity: 0;
+  animation-delay: 0.5s;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
 }
 
 .earth {
-  grid-area: 1/2;
+  grid-area: 4/6/8/8;
+  margin-right: -70%;
 }
 
 .mars {
-  grid-area: 2/2;
-  margin: 50px 150px 0 0;
+  grid-area: 4/6/9/8;
+  margin-bottom: -100%;
 }
 
 .tsubu {
-  grid-area: 2/2;
+  grid-area: 6/7/9/8;
 }
 
 .rocket {
-  grid-area: 1/1;
+  grid-area: 5/6/6/7;
 }
 
 @media (min-width: 1024px) {
   .container {
     height: 100vh;
   }
-}
-
-/*.keyVisual {
-  width: 100vw;
-  height: 400px;
-  position: relative;
-  display: grid;
-  place-items: center;
-  h1 {
-    position: fixed;
-    padding: 20px 20px;
-    border: solid 1px white;
-    font-size: 10vw;
-    color: white;
-    animation-name: fadeinup;
-    opacity: 0;
-    animation-delay: 3s;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards;
-    .highlight {
-      text-decoration: underline;
-      text-decoration-thickness: 0.2em;
-      text-decoration-color: rgba(255, 0, 43, 0.8);
-      text-underline-offset: -0.1em;
-      text-decoration-skip-ink: none;
-    }
+  .group {
+    font-size: 3vh;
   }
-}
-
-.keyVisual::before {
-  content: "";
-  position: fixed;
-  //z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 400px;
-  background: url(https://cdn.pixabay.com/photo/2017/02/09/12/02/mars-2051747_1280.png);
-  background-size: cover;
-  background-position: top right;
-  animation-name: fadein;
-  opacity: 0;
-  animation-delay: 1.5s;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
 }
 
 @keyframes fadeinup {
   0% {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(50px);
   }
 
   100% {
@@ -117,21 +85,3 @@
     transform: translateY(0);
   }
 }
-
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@media (min-width: 1024px) {
-  .keyVisual {
-    height: 100vh;
-  }
-  .keyVisual::before {
-    height: 100vh;
-  }
-}*/
